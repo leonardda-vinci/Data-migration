@@ -14,7 +14,8 @@ class CreatePassengerTable extends Migration
     public function up()
     {
         Schema::create('passenger', function (Blueprint $table) {
-            $table->id('id_number');
+            $table->id();
+            $table->Integer('id_number');
             $table->string('name');
             $table->integer('contact_number');
             $table->string('address');
